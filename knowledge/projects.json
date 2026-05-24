@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Corteva Agriscience Office Renovation",
+    "client": "Corteva",
+    "location": "M Thai Tower, Bangkok",
+    "value": "6,449,275 Baht",
+    "duration": "4 months",
+    "category": "Office fit-out",
+    "year": "2024",
+    "sourcePage": 20,
+    "image": "/images/projects/corteva-office.jpg",
+    "summary": "Design and construction of approximately 600 m2 of office space including boardroom, canteen, co-working space, and workstation rearrangement.",
+    "highlights": [
+      "Office space design and construction",
+      "Boardroom and multifunction canteen renovation",
+      "Co-working space construction",
+      "Successful handover in January 2025"
+    ]
+  },
+  {
+    "name": "STT Parking Shelter",
+    "client": "STT GDC (Thailand)",
+    "location": "Soi Ramkhamhaeng 28, Bangkok",
+    "value": "2,323,839 Baht",
+    "duration": "3 months",
+    "category": "Steel structure",
+    "year": "2024",
+    "sourcePage": 24,
+    "image": "/images/projects/stt-parking-shelter.jpg",
+    "summary": "Construction of a car-parking shade structure for 15 parking spaces with underground piping survey and off-site steel fabrication.",
+    "highlights": [
+      "Car-parking shade for 15 spaces",
+      "Underground piping obstruction survey",
+      "Piling and foundation works",
+      "Off-site steel fabrication to reduce erection time"
+    ]
+  },
+  {
+    "name": "BTS Green Line Depot Facility Improvement",
+    "client": "Bangkok Mass Transit System Pcl.",
+    "location": "Samut Prakan",
+    "value": "16,000,000 Baht",
+    "duration": "12 months",
+    "category": "Facility improvement",
+    "year": "2019",
+    "sourcePage": 80,
+    "image": "/images/projects/bts-depot-improvement.jpg",
+    "summary": "Facility improvement works for an existing depot, including canopy extension, maintenance area renovation, line marking, steel structure works, and structural design support.",
+    "highlights": [
+      "New canopy extension",
+      "Maintenance area renovation",
+      "Line marking and miscellaneous steel structure works",
+      "Design and calculation of structural works"
+    ]
+  },
+  {
+    "name": "Servcorp Mercury Office Fit-Out",
+    "client": "Servcorp Co., Ltd.",
+    "location": "Mercury Tower, Bangkok",
+    "value": "23,036,216 Baht",
+    "duration": "2 months",
+    "category": "Office fit-out",
+    "year": "2017",
+    "sourcePage": 84,
+    "image": "/images/projects/servcorp-mercury.jpg",
+    "summary": "Office fit-out and co-working space decoration for approximately 1,100 m2 at Mercury Tower.",
+    "highlights": [
+      "Co-working space fit-out",
+      "Approximately 1,100 m2 office area",
+      "Interior decoration for premium shared workspace",
+      "Repeat client relationship across multiple Servcorp locations"
+    ]
+  },
+  {
+    "name": "UNOPS Office Interior Decoration",
+    "client": "United Nations",
+    "location": "208 Wireless Building, Wireless Road, Bangkok",
+    "value": "7,000,000 Baht",
+    "duration": "3 months",
+    "category": "Interior decoration",
+    "year": "2021",
+    "sourcePage": 46,
+    "image": "/images/projects/unops-office.jpg",
+    "summary": "Interior decoration of a new United Nations office with conference rooms, pantry, and working areas.",
+    "highlights": [
+      "New office interior decoration",
+      "Conference room construction",
+      "Pantry and workplace fit-out",
+      "Delivered for an international organization"
+    ]
+  },
+  {
+    "name": "Auto Alliance Employee Car Park",
+    "client": "Auto Alliance (Thailand) Co., Ltd.",
+    "location": "Eastern Seaboard Industrial Estate, Pluak Daeng",
+    "value": "60,000,000 Baht",
+    "duration": "4 months",
+    "category": "Civil construction",
+    "year": "2013",
+    "sourcePage": 114,
+    "image": "/images/projects/auto-alliance-carpark.jpg",
+    "summary": "Construction service for the AAT Employee Carpark project at Eastern Seaboard Industrial Estate.",
+    "highlights": [
+      "Large-scale employee car park construction",
+      "Industrial estate construction environment",
+      "Civil and site works coordination",
+      "High-value automotive-sector project"
+    ]
+  }
+]
