@@ -26,7 +26,7 @@ describe('Porrama launch content', () => {
   it('covers the intended expertise and client trust signals', () => {
     expect(siteContent.expertise.map((item) => item.title)).toEqual(
       expect.arrayContaining([
-        'Office fit-out and renovation',
+        'Design and construction',
         'Steel and civil construction',
         'Project management',
         'Value engineering',

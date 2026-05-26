@@ -1,6 +1,4 @@
-import projects from '../../knowledge/projects.json';
-
-export type Project = (typeof projects)[number];
+import { fallbackProjects } from './projects';
 
 export const siteContent = {
   brand: {
@@ -16,14 +14,14 @@ export const siteContent = {
     { label: 'Contact', href: '#contact' },
   ],
   hero: {
-    title: 'Office Fit-Out & Interior Specialist',
-    body: 'Turnkey office fit-out, renovation, and construction services across Thailand with disciplined project management, quality control, and value engineering.',
+    title: 'Professional Construction Specialist',
+    body: 'Porrama Engineering delivers design coordination, turnkey construction, renovation, steel, civil, and facility improvement projects across Thailand with disciplined project management, quality control, and value engineering.',
     proof: ['Fast turnaround', 'Top-notch quality control', 'Expert project management', 'Cost-effective value engineering'],
   },
   expertise: [
     {
-      title: 'Office fit-out and renovation',
-      body: 'Workspace planning, interior decoration, reinstatement, boardrooms, pantries, coworking areas, and office handover works.',
+      title: 'Design and construction',
+      body: 'Practical design coordination, construction planning, procurement support, site execution, and handover across commercial and industrial projects.',
     },
     {
       title: 'Steel and civil construction',
@@ -65,5 +63,5 @@ export const siteContent = {
     emailHref: 'mailto:porrama456@gmail.com',
     address: '932/7 Nakhon Ratchasima Road, Nakornchaisri, Dusit, Bangkok 10300',
   },
-  projects,
+  projects: fallbackProjects,
 };

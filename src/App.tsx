@@ -10,20 +10,21 @@ import {
   Phone,
   ShieldCheck,
 } from 'lucide-react';
-import { siteContent, type Project } from './data/siteContent';
+import { useEffect, useState } from 'react';
+import { siteContent } from './data/siteContent';
+import {
+  defaultProjectsSheetCsvUrl,
+  loadProjectsFromGoogleSheet,
+  type Project,
+} from './data/projects';
 
 const expertiseIcons = [Building2, Hammer, HardHat, Compass];
+type FetchProjects = Parameters<typeof loadProjectsFromGoogleSheet>[1];
 
 function BrandMark() {
   return (
     <a className="brand" href="#top" aria-label="Porrama Engineering home">
-      <span className="brand-emblem" aria-hidden="true">
-        P
-      </span>
-      <span>
-        <strong>{siteContent.brand.mark}</strong>
-        <small>{siteContent.brand.tagline}</small>
-      </span>
+      <img className="brand-logo" src="/images/brand/porrama-logo.jpg" alt="" aria-hidden="true" />
     </a>
   );
 }
@@ -58,7 +59,29 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-export default function App() {
+type AppProps = {
+  projectsCsvUrl?: string;
+  fetchProjects?: FetchProjects;
+};
+
+export default function App({
+  projectsCsvUrl = defaultProjectsSheetCsvUrl,
+  fetchProjects,
+}: AppProps = {}) {
+  const [projects, setProjects] = useState<Project[]>(siteContent.projects);
+
+  useEffect(() => {
+    let isActive = true;
+
+    loadProjectsFromGoogleSheet(projectsCsvUrl, fetchProjects).then((loadedProjects) => {
+      if (isActive) setProjects(loadedProjects);
+    });
+
+    return () => {
+      isActive = false;
+    };
+  }, [fetchProjects, projectsCsvUrl]);
+
   return (
     <main id="top">
       <header className="site-header" aria-label="Main navigation">
@@ -104,8 +127,8 @@ export default function App() {
         <div className="section-heading">
           <h2 id="expertise-title">Turnkey Construction Capability</h2>
           <p>
-            Porrama supports clients from site constraints and budget decisions through construction,
-            supervision, quality checks, and handover.
+            Porrama supports clients from design coordination, site constraints, and budget
+            decisions through construction, supervision, quality checks, and handover.
           </p>
         </div>
         <div className="expertise-grid">
@@ -126,8 +149,8 @@ export default function App() {
         <div>
           <h2 id="process-title">Built Around Practical Delivery</h2>
           <p>
-            The company profile shows work across corporate offices, factories, transport facilities,
-            hospitality spaces, and international organization sites.
+            The company profile shows work across factories, transport facilities, hospitality
+            spaces, commercial buildings, corporate offices, and international organization sites.
           </p>
         </div>
         <ol className="process-list">
@@ -141,12 +164,12 @@ export default function App() {
         <div className="section-heading">
           <h2 id="projects-title">Featured Projects</h2>
           <p>
-            Selected references from the company profile, spanning office fit-out, steel structures,
-            facility improvement, and civil construction.
+            Selected references from the company profile, spanning design-and-build delivery,
+            steel structures, facility improvement, renovation, and civil construction.
           </p>
         </div>
         <div className="project-grid">
-          {siteContent.projects.map((project) => (
+          {projects.map((project) => (
             <ProjectCard project={project} key={project.name} />
           ))}
         </div>
@@ -157,7 +180,7 @@ export default function App() {
           <h2 id="clients-title">Trusted By Local And Global Clients</h2>
           <p>
             Client references from Porrama's profile include transport, automotive, manufacturing,
-            international organizations, and serviced-office brands.
+            international organizations, hospitality, and commercial workplace brands.
           </p>
         </div>
         <div className="client-list">
@@ -171,8 +194,8 @@ export default function App() {
         <div className="contact-copy">
           <h2 id="contact-title">Bring Your Next Workspace Or Facility Project To Life</h2>
           <p>
-            Speak directly with Porrama Engineering about office renovation, interior fit-out,
-            steel works, civil construction, and turnkey project delivery in Thailand.
+            Speak directly with Porrama Engineering about design coordination, construction,
+            renovation, steel works, civil works, and turnkey project delivery in Thailand.
           </p>
         </div>
         <address className="contact-panel">

@@ -1,0 +1,2 @@
+sort_order,visible,project_name,project_image,description,client,location,value,duration,category,year,highlights
+1,yes,Sample Admin Project,/images/projects/corteva-office.jpg,"This sample row proves the website can read project content from a CSV feed.",Admin Client,Bangkok,Sample value,Sample duration,Office fit-out,2026,"CSV controlled|Admin editable"
