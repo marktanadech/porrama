@@ -57,9 +57,11 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px clamp(20px, 5vw, 72px);
-  color: #ffffff;
-  background: linear-gradient(180deg, rgb(9 31 18 / 0.76), rgb(9 31 18 / 0.12));
+  min-height: 88px;
+  padding: 12px clamp(20px, 5vw, 72px);
+  color: var(--green-900);
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgb(16 63 32 / 0.12);
 }
 
 .brand {
@@ -69,10 +71,8 @@ img {
 }
 
 .brand-logo {
-  width: clamp(136px, 16vw, 172px);
+  width: clamp(160px, 17vw, 200px);
   height: auto;
-  border-radius: 4px;
-  background: #ffffff;
 }
 
 .site-header nav {
@@ -91,6 +91,7 @@ img {
 .site-header nav a:hover,
 .site-header nav a:focus-visible {
   border-color: var(--gold);
+  color: var(--green-700);
 }
 
 .hero {
@@ -510,6 +511,12 @@ footer {
   color: #ffffff;
 }
 
+footer .brand-logo {
+  padding: 6px;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
 footer a:last-child {
   display: inline-flex;
   align-items: center;
@@ -521,8 +528,7 @@ footer a:last-child {
 
 @media (max-width: 980px) {
   .site-header {
-    position: absolute;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .site-header nav {
@@ -557,11 +563,13 @@ footer a:last-child {
 
 @media (max-width: 680px) {
   .site-header {
-    padding-top: 16px;
+    min-height: 76px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .brand-logo {
-    width: 132px;
+    width: 148px;
   }
 
   .hero {

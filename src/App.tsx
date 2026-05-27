@@ -24,7 +24,12 @@ type FetchProjects = Parameters<typeof loadProjectsFromGoogleSheet>[1];
 function BrandMark() {
   return (
     <a className="brand" href="#top" aria-label="Porrama Engineering home">
-      <img className="brand-logo" src="/images/brand/porrama-logo.jpg" alt="" aria-hidden="true" />
+      <img
+        className="brand-logo"
+        src="/images/brand/porrama-logo-transparent.png"
+        alt=""
+        aria-hidden="true"
+      />
     </a>
   );
 }
