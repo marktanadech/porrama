@@ -33,7 +33,7 @@ export function normalizeProjectImageUrl(value: string) {
   const id = filePathMatch?.[1] ?? openIdMatch?.[1];
 
   if (imageUrl.includes('drive.google.com') && id) {
-    return `https://drive.google.com/uc?export=view&id=${id}`;
+    return `https://drive.google.com/thumbnail?id=${id}&sz=w1200`;
   }
 
   return imageUrl;

@@ -33,9 +33,16 @@ describe('Google Sheets project backend', () => {
   it('normalizes Google Drive sharing links into image URLs', () => {
     expect(
       normalizeProjectImageUrl('https://drive.google.com/file/d/1abcDEFghi_JKL/view?usp=sharing'),
-    ).toBe('https://drive.google.com/uc?export=view&id=1abcDEFghi_JKL');
+    ).toBe('https://drive.google.com/thumbnail?id=1abcDEFghi_JKL&sz=w1200');
     expect(normalizeProjectImageUrl('https://drive.google.com/open?id=1abcDEFghi_JKL')).toBe(
-      'https://drive.google.com/uc?export=view&id=1abcDEFghi_JKL',
+      'https://drive.google.com/thumbnail?id=1abcDEFghi_JKL&sz=w1200',
+    );
+    expect(
+      normalizeProjectImageUrl(
+        'https://drive.google.com/file/d/1xWfqK5yzgMuWkVAugQWZ8UskYDLnXpxG/view?usp=drive_link',
+      ),
+    ).toBe(
+      'https://drive.google.com/thumbnail?id=1xWfqK5yzgMuWkVAugQWZ8UskYDLnXpxG&sz=w1200',
     );
   });
 

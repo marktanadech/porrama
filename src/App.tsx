@@ -35,9 +35,21 @@ function BrandMark() {
 }
 
 function ProjectCard({ project }: { project: Project }) {
+  const [imageFailed, setImageFailed] = useState(false);
+
   return (
     <article className="project-card" data-testid="project-card">
-      <img src={project.image} alt={`${project.name} project reference`} />
+      {imageFailed ? (
+        <div className="project-image-fallback" role="img" aria-label={`${project.name} project reference`}>
+          <span>{project.category}</span>
+        </div>
+      ) : (
+        <img
+          src={project.image}
+          alt={`${project.name} project reference`}
+          onError={() => setImageFailed(true)}
+        />
+      )}
       <div className="project-card-content">
         <div className="project-meta">
           <span>{project.category}</span>
